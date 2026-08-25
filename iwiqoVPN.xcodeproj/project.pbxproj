@@ -1,0 +1,401 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2ADDF6DF895CE1DF5270E09E /* VPNManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4DBD2D3BDC5E6A87729E22 /* VPNManager.swift */; };
+		488008010829930066B6E562 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C28CD9ECD9B3FD14375389 /* ThemeManager.swift */; };
+		522464F2ED897BE9691D7B68 /* BotService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34996304BA6BBEF65C96486E /* BotService.swift */; };
+		58F92A918479E89AFB6C18C2 /* iwiqoVPNApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7B2C51FB3FC31FC8E6FAE8 /* iwiqoVPNApp.swift */; };
+		767086018CF945919FD19084 /* VPNModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFBAE248D0154183F71B904 /* VPNModels.swift */; };
+		926C4585FE3FF503DD6FC247 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EB2B3ADECB0FD277518564 /* MainView.swift */; };
+		AD37CA118B1E2C3FC256CD0D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29C117050DE3A4C80CE17D1 /* SettingsView.swift */; };
+		C90FB58B935DC604A2BFB973 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA32FDED1CE2CF3FCF76DD4 /* ServiceManagement.framework */; };
+		D4BFCDB61EF10F3332F186D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281C6665A3B195AB8C508E45 /* AppDelegate.swift */; };
+		F07F998CEFBC61219ED650A1 /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2135C0A7320D55E6ABE5E27E /* SetupView.swift */; };
+		F5CC7E5CAB8A003E78EC1B29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1050DD9427E43A7C1794EB33 /* Assets.xcassets */; };
+		FC85AE634A411142E445B168 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3849B247D11D0B7CFCF5901A /* SettingsManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		02C28CD9ECD9B3FD14375389 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		0D4DBD2D3BDC5E6A87729E22 /* VPNManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNManager.swift; sourceTree = "<group>"; };
+		1050DD9427E43A7C1794EB33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2135C0A7320D55E6ABE5E27E /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
+		281C6665A3B195AB8C508E45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		34996304BA6BBEF65C96486E /* BotService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotService.swift; sourceTree = "<group>"; };
+		3849B247D11D0B7CFCF5901A /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		4ECFE51BB42824EE2093C9E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A01D8A87729FBCD60B31876E /* iwiqoVPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iwiqoVPN.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD7B2C51FB3FC31FC8E6FAE8 /* iwiqoVPNApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iwiqoVPNApp.swift; sourceTree = "<group>"; };
+		CDA32FDED1CE2CF3FCF76DD4 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		D29C117050DE3A4C80CE17D1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D7EB2B3ADECB0FD277518564 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		DAFBAE248D0154183F71B904 /* VPNModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNModels.swift; sourceTree = "<group>"; };
+		E4097E90DA6676D90DE97AD9 /* iwiqoVPN.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iwiqoVPN.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		609AFF3A011CDCFD10A40655 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C90FB58B935DC604A2BFB973 /* ServiceManagement.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C6F3B61B3972AC014E6D60E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A01D8A87729FBCD60B31876E /* iwiqoVPN.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B1B974EF1E4617FC447BCB5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D7EB2B3ADECB0FD277518564 /* MainView.swift */,
+				D29C117050DE3A4C80CE17D1 /* SettingsView.swift */,
+				2135C0A7320D55E6ABE5E27E /* SetupView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		659C867133CF6AFD18473867 = {
+			isa = PBXGroup;
+			children = (
+				E9570F86CBCD0B64887AB9AE /* Sources */,
+				8F8496EF46C4A13817BF0994 /* Frameworks */,
+				1C6F3B61B3972AC014E6D60E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6D8AA71629BA0F7855D7F4A9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				34996304BA6BBEF65C96486E /* BotService.swift */,
+				3849B247D11D0B7CFCF5901A /* SettingsManager.swift */,
+				02C28CD9ECD9B3FD14375389 /* ThemeManager.swift */,
+				0D4DBD2D3BDC5E6A87729E22 /* VPNManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7D2C1380D046E42C53AB4969 /* iwiqoVPN */ = {
+			isa = PBXGroup;
+			children = (
+				281C6665A3B195AB8C508E45 /* AppDelegate.swift */,
+				1050DD9427E43A7C1794EB33 /* Assets.xcassets */,
+				4ECFE51BB42824EE2093C9E8 /* Info.plist */,
+				E4097E90DA6676D90DE97AD9 /* iwiqoVPN.entitlements */,
+				AD7B2C51FB3FC31FC8E6FAE8 /* iwiqoVPNApp.swift */,
+				F4F94AC0587C99FDEC650863 /* Models */,
+				6D8AA71629BA0F7855D7F4A9 /* Services */,
+				5B1B974EF1E4617FC447BCB5 /* Views */,
+			);
+			path = iwiqoVPN;
+			sourceTree = "<group>";
+		};
+		8F8496EF46C4A13817BF0994 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CDA32FDED1CE2CF3FCF76DD4 /* ServiceManagement.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E9570F86CBCD0B64887AB9AE /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				7D2C1380D046E42C53AB4969 /* iwiqoVPN */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		F4F94AC0587C99FDEC650863 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DAFBAE248D0154183F71B904 /* VPNModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0C8A255EE77869206A99164D /* iwiqoVPN */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A089C2421DE5E41F1D76F344 /* Build configuration list for PBXNativeTarget "iwiqoVPN" */;
+			buildPhases = (
+				B5A34CA13BDA59CF83CC8729 /* Sources */,
+				57529026F1FC1F6111B95D09 /* Resources */,
+				609AFF3A011CDCFD10A40655 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iwiqoVPN;
+			packageProductDependencies = (
+			);
+			productName = iwiqoVPN;
+			productReference = A01D8A87729FBCD60B31876E /* iwiqoVPN.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E634D1846B6645E9E3168B52 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					0C8A255EE77869206A99164D = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EB52968B6A5F706743557ACF /* Build configuration list for PBXProject "iwiqoVPN" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 659C867133CF6AFD18473867;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 1C6F3B61B3972AC014E6D60E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0C8A255EE77869206A99164D /* iwiqoVPN */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		57529026F1FC1F6111B95D09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5CC7E5CAB8A003E78EC1B29 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B5A34CA13BDA59CF83CC8729 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4BFCDB61EF10F3332F186D8 /* AppDelegate.swift in Sources */,
+				522464F2ED897BE9691D7B68 /* BotService.swift in Sources */,
+				926C4585FE3FF503DD6FC247 /* MainView.swift in Sources */,
+				FC85AE634A411142E445B168 /* SettingsManager.swift in Sources */,
+				AD37CA118B1E2C3FC256CD0D /* SettingsView.swift in Sources */,
+				F07F998CEFBC61219ED650A1 /* SetupView.swift in Sources */,
+				488008010829930066B6E562 /* ThemeManager.swift in Sources */,
+				2ADDF6DF895CE1DF5270E09E /* VPNManager.swift in Sources */,
+				767086018CF945919FD19084 /* VPNModels.swift in Sources */,
+				58F92A918479E89AFB6C18C2 /* iwiqoVPNApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		53F83EC9B2A06B646B8904A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Sources/iwiqoVPN/iwiqoVPN.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Sources/iwiqoVPN/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5BFB7C535B3888F339A85AC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright (c) 2026 iwiqo. All rights reserved.";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iwiqo.vpn;
+				PRODUCT_NAME = iwiqoVPN;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		C678CF2DFB3C4C3CA4B1ACD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright (c) 2026 iwiqo. All rights reserved.";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iwiqo.vpn;
+				PRODUCT_NAME = iwiqoVPN;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		FBB0AE727897B9141051A7B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Sources/iwiqoVPN/iwiqoVPN.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Sources/iwiqoVPN/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A089C2421DE5E41F1D76F344 /* Build configuration list for PBXNativeTarget "iwiqoVPN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBB0AE727897B9141051A7B7 /* Debug */,
+				53F83EC9B2A06B646B8904A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EB52968B6A5F706743557ACF /* Build configuration list for PBXProject "iwiqoVPN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C678CF2DFB3C4C3CA4B1ACD9 /* Debug */,
+				5BFB7C535B3888F339A85AC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E634D1846B6645E9E3168B52 /* Project object */;
+}
