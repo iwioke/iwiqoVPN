@@ -158,15 +158,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             tinted.isTemplate = false
             button.image = tinted
         } else {
-            // Белая иконка — template режим
-            let whiteImage = NSImage(size: symbolImage.size)
-            whiteImage.lockFocus()
-            symbolImage.draw(in: NSRect(origin: .zero, size: symbolImage.size))
-            NSColor.white.setFill()
-            NSRect(origin: .zero, size: symbolImage.size).fill(using: .sourceAtop)
-            whiteImage.unlockFocus()
-            whiteImage.isTemplate = false
-            button.image = whiteImage
+            // Системная адаптивная иконка — template режим
+            symbolImage.isTemplate = true
+            button.image = symbolImage
         }
     }
 
