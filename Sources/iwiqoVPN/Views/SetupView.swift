@@ -286,18 +286,14 @@ struct SetupView: View {
         showError = false
         showSuccess = false
 
-        print("🔍 Начинаю загрузку конфига для токена: \(token)")
-
         BotService.shared.downloadConfig(token: token) { result in
             DispatchQueue.main.async {
                 isLoading = false
 
                 switch result {
                 case .success(let config):
-                    print("✅ Конфиг получен, длина: \(config.count)")
                     do {
-                        let path = try BotService.shared.saveConfig(config)
-                        print("✅ Конфиг сохранён: \(path)")
+                        _ = try BotService.shared.saveConfig(config)
                         // Сохраняем токен для будущих запросов статистики
                         SettingsManager.shared.token = token
                         // Обновляем реактивный статус

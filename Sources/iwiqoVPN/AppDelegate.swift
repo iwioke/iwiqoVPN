@@ -90,6 +90,16 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             name: .iwiqoClosePopover,
             object: nil
         )
+        NSWorkspace.shared.notificationCenter.addObserver(
+            self,
+            selector: #selector(handleSystemWake),
+            name: NSWorkspace.didWakeNotification,
+            object: nil
+        )
+    }
+
+    @objc private func handleSystemWake() {
+        vpnManager.handleSystemWake()
     }
 
     @objc private func handleClosePopover() {
