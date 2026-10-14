@@ -35,16 +35,25 @@ final class VPNManager: ObservableObject {
     }()
 
     /// Пути к утилитам (Homebrew)
-    private let wgQuickPath = "/opt/homebrew/bin/wg-quick"
-    private let wgPath = "/opt/homebrew/bin/wg"
+    private let wgQuickPath: String
+    private let wgPath: String
     private let sudoPath = "/usr/bin/sudo"
+    private let initialHandshakeGracePeriod: TimeInterval = 90
+    private var tunnelActivatedAt: Date?
 
     /// VPN подсеть для проверки подключения (любой 10.8.0.x)
     private let vpnSubnet = "10.8.0."
 
     private init() {
+        wgQuickPath = Self.wireGuardExecutablePath(named: "wg-quick")
+        wgPath = Self.wireGuardExecutablePath(named: "wg")
         loadServers()
         checkStatus()
+    }
+
+    private static func wireGuardExecutablePath(named name: String) -> String {
+        let paths = ["/opt/homebrew/bin/\(name)", "/usr/local/bin/\(name)", "/usr/bin/\(name)"]
+        return paths.first(where: { FileManager.default.isExecutableFile(atPath: $0) }) ?? paths[0]
     }
 
     // MARK: - Servers
@@ -73,6 +82,7 @@ final class VPNManager: ObservableObject {
                 guard interface != nil else { return }
                 self.status = .connected
                 self.connectedTime = Date()
+                self.tunnelActivatedAt = Date()
                 self.shouldReconnect = true
                 self.reconnectAttempts = 0
                 self.startTimer()
@@ -248,6 +258,7 @@ final class VPNManager: ObservableObject {
 
         tunnelOperationInProgress = true
         reconnectWorkItem = nil
+        tunnelActivatedAt = nil
         status = .connecting
         onStatusChange?(status)
 
@@ -307,6 +318,7 @@ final class VPNManager: ObservableObject {
                 if !stillConnected {
                     self.status = .disconnected
                     self.connectedTime = nil
+                    self.tunnelActivatedAt = nil
                     self.stopTimer()
                     self.onStatusChange?(self.status)
                 } else {
@@ -416,27 +428,19 @@ final class VPNManager: ObservableObject {
     private func verifyConnection(reconnecting: Bool) {
         DispatchQueue.global(qos: .background).async { [weak self] in
             guard let self = self else { return }
-
-            // Небольшая задержка чтобы интерфейс поднялся
-            var interface: String?
-            for _ in 0..<10 {
-                if let activeInterface = self.recentHandshakeInterface() {
-                    interface = activeInterface
-                    break
-                }
-                Thread.sleep(forTimeInterval: 1)
-            }
+            let isConnected = self.checkIfConnected()
 
             DispatchQueue.main.async {
-                if interface != nil {
+                if isConnected {
                     self.status = .connected
                     self.connectedTime = Date()
+                    self.tunnelActivatedAt = Date()
                     self.reconnectAttempts = 0
                     self.tunnelOperationInProgress = false
                     self.startTimer()
                     self.onStatusChange?(self.status)
                 } else {
-                    self.connectionFailed("Сервер не подтвердил соединение", reconnecting: reconnecting)
+                    self.connectionFailed("WireGuard-интерфейс не поднялся", reconnecting: reconnecting)
                 }
             }
         }
@@ -446,6 +450,8 @@ final class VPNManager: ObservableObject {
         guard status == .connected,
               shouldReconnect,
               persistentKeepaliveIsEnabled(),
+              let tunnelActivatedAt,
+              Date().timeIntervalSince(tunnelActivatedAt) >= initialHandshakeGracePeriod,
               !healthCheckInProgress,
               !tunnelOperationInProgress else {
             return

@@ -54,8 +54,11 @@ brew install wireguard-tools
 ### 2. Настроить sudoers (запуск `wg-quick` без пароля)
 
 ```bash
-echo "ALL ALL=(root) NOPASSWD: /opt/homebrew/bin/wg-quick" | sudo tee /etc/sudoers.d/iwiqo-vpn
-echo "ALL ALL=(root) NOPASSWD: /opt/homebrew/bin/wg" | sudo tee -a /etc/sudoers.d/iwiqo-vpn
+WG_QUICK_PATH="$(command -v wg-quick)"
+WG_PATH="$(command -v wg)"
+printf '%s ALL=(root) NOPASSWD: %s\n' "$(id -un)" "$WG_QUICK_PATH" | sudo tee /etc/sudoers.d/iwiqo-vpn
+printf '%s ALL=(root) NOPASSWD: %s\n' "$(id -un)" "$WG_PATH" | sudo tee -a /etc/sudoers.d/iwiqo-vpn
+sudo visudo -cf /etc/sudoers.d/iwiqo-vpn
 ```
 
 ### 3. Сгенерировать Xcode-проект
